@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<ul>
+	<li><p>ID: <%= @pessoa.id %></p></li>
+	<li><p>Nome: <%= @pessoa.nome %></p></li>
+	<li><p>CPF: <%= @pessoa.cpf %></p></li>
+	<li><p>E-mail: <%= @pessoa.email %></p></li>
+	<li><p>Endereço: <%= @pessoa.endereco %></p></li>
+	<li><p>Data de Nascimento: <%= @pessoa.data_nascimento %></p></li>
+
+</ul>
+
+<%= link_to 'Editar Dados', edit_pessoa_path(@pessoa) %>
+<%= link_to 'Voltar', pessoas_path %>
+

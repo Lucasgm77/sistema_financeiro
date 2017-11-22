@@ -1,0 +1,39 @@
+<h1>Pessoas</h1>
+
+<%= link_to"Cadastrar nova pessoa",new_pessoa_path %>
+
+<div class="table-responsive">
+  <table class="table">
+	  <thead> 
+		  <tr>
+			  <th>ID</th>
+			  <th>Nome</th>
+			  <th>CPF</th>
+			  <th>E-mail</th>
+			  <th>Endereço</th>
+			  <th>Data Nascimento</th>
+		  </tr>
+	  </thead>
+
+	  <tbody>
+		 <% @pessoas.each do |pessoa| %>
+			<tr>
+			  <td><%= pessoa.id %></td> 
+				<td><%= pessoa.nome %></td>
+				<td><%= pessoa.cpf %></td>
+				<td><%= pessoa.email %></td>
+				<td><%= pessoa.endereco %></td>
+				<td><%= pessoa.data_nascimento %></td>
+				<td><%= link_to 'Perfil', pessoa %></td>
+				<td><%= link_to 'Editar', edit_pessoa_path(pessoa) %></td>
+				<td><%= link_to 'Deletar', pessoa,  method: :delete, data: { confirm: 'Confirmar?' }%></td>
+			</tr>
+		 <% end %>
+	  </tbody>
+  </table>
+</div>
+
+
+
+
+

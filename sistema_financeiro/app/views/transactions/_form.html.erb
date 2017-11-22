@@ -1,0 +1,45 @@
+<%= form_for(@transaction) do |f| %>
+  <% if @transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+      <% @transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :origem %><br>
+    <%= f.text_area :origem %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :desconto %><br>
+    <%= f.text_field :desconto %>
+  </div>
+  <div class="field">
+    <%= f.label :multa %><br>
+    <%= f.text_field :multa %>
+  </div>
+  <div class="field">
+    <%= f.label :data_hora  %><br>
+    <%= f.datetime_select :data_hora %>
+  </div>
+  <div class="field">
+    <%= f.label :account_id %><br>
+    <%= f.number_field :account_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit value="Concluir" %>
+  </div>
+<% end %>

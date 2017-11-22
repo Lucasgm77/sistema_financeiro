@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  saldo: 9.99
+  senha: MyString
+
+two:
+  saldo: 9.99
+  senha: MyString

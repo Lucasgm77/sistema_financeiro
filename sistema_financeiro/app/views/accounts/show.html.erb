@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @account.id %>
+</p>
+
+<p>
+  <strong>Saldo:</strong>
+  <%= @account.saldo %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @account.senha %>
+</p>
+
+<p>
+  <strong>ID Pessoa</strong>
+  <%= @account.pessoa_id %>
+</p>
+
+<%= link_to 'Editar', edit_account_path(@account) %> |
+<%= link_to 'Voltar', accounts_path %>
